@@ -9,40 +9,50 @@ import UIKit
 
 import FRadioPlayer
 
+import Kingfisher
+
+
 
 class ViewController: UIViewController, FRadioPlayerDelegate {
+    //MARK: - Delegate
     func radioPlayer(_ player: FRadioPlayer, playerStateDidChange state: FRadioPlayerState) {
-        if state != nil{
+        
             print("Debug: -FRadioPlayerState \(state)")
-        }
+        
        
     }
     
     func radioPlayer(_ player: FRadioPlayer, playbackStateDidChange state: FRadioPlaybackState) {
-        if state != nil{
+      
             print("Debug: -FRadioPlaybackState \(state)")
-        }
+        
     }
     
     func radioPlayer(_ player: FRadioPlayer, itemDidChange url: URL?){
         if url != nil{print("Debug: -URL \(url!)")
+            
         }
     }
     
     func radioPlayer(_ player: FRadioPlayer, metadataDidChange artistName: String?, trackName: String?){
         if (artistName != nil) &&  trackName != nil{
-        print("Debug: -artistName \(artistName)")
+        print("Debug: -artistName \(artistName!)")
         print("Debug: -trackName \(trackName!)")
         }
     }
     func radioPlayer(_ player: FRadioPlayer, metadataDidChange rawValue: String?){
         if rawValue != nil{
         print("Debug: -rawValue \(rawValue!)")
+            parcaBilgisiLabel.text = rawValue
         }
     }
     func radioPlayer(_ player: FRadioPlayer, artworkDidChange artworkURL: URL?){
        
         if artworkURL != nil{
+            let url = URL(string: "\(artworkURL!)")
+            channelLogo.kf.setImage(with: url)
+
+            
             print("Debug: -artworkURL \(artworkURL!)")
         }
     }
@@ -50,18 +60,14 @@ class ViewController: UIViewController, FRadioPlayerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        //MARK: - Radio
+        //MARK: - Outlet
+        
         player.delegate = self
-        player.radioURL = URL(string: "https://listen.powerapp.com.tr/powerturk/mpeg/icecast.audio?/")
-
-       
-        
-        
-        
-        
-        
+        player.radioURL = URL(string: "https://playerservices.streamtheworld.com/api/livestream-redirect/JOY_TURK_SC?/")
     }
-    //MARK: - Tool Control
+    @IBOutlet weak var parcaBilgisiLabel: UILabel!
+    @IBOutlet weak var channelLogo: UIImageView!
+    //MARK: - Control
     @IBAction func btnPlayPause(_ sender: Any) {
         player.togglePlaying()
     }

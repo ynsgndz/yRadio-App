@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d5A-zc-2bv">
-                                <rect key="frame" x="111" y="736" width="193" height="31"/>
+                                <rect key="frame" x="111" y="788" width="193" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Radyo listesi"/>
@@ -25,17 +25,6 @@
                                     <segue destination="lir-os-qrG" kind="show" id="nyT-I2-lk4"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b3h-TO-wzk">
-                                <rect key="frame" x="87" y="166" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pfp-Y9-zko">
-                                <rect key="frame" x="186" y="401" width="8" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1w3-i3-cEk">
                                 <rect key="frame" x="135" y="566" width="145" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -45,57 +34,91 @@
                                     <action selector="btnPlayPause:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1PR-3c-E4p"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Parca bilgisi" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pfp-Y9-zko">
+                                <rect key="frame" x="80" y="438" width="254" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b3h-TO-wzk">
+                                <rect key="frame" x="60" y="164" width="295" height="169"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <navigationItem key="navigationItem" title="yRadio App" id="bCU-LB-DGF"/>
+                    <connections>
+                        <outlet property="channelLogo" destination="b3h-TO-wzk" id="5HQ-IK-cAo"/>
+                        <outlet property="parcaBilgisiLabel" destination="pfp-Y9-zko" id="Ehp-ar-Fm7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="923.1884057971015" y="23.4375"/>
         </scene>
-        <!--Item 2-->
+        <!--Ayarlar-->
         <scene sceneID="wgG-cN-5Co">
             <objects>
                 <viewController id="VSW-1z-nSD" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="d7y-cc-nb6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sMT-xs-TIb">
+                                <rect key="frame" x="0.0" y="88" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem title="Ayarlar" width="42" springLoaded="YES" id="71x-OM-qsU"/>
+                                </items>
+                            </toolbar>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="ahi-zX-wZN"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="dzD-Dg-Rre"/>
+                    <tabBarItem key="tabBarItem" title="Ayarlar" image="rectangle.righthalf.inset.filled" catalog="system" id="dzD-Dg-Rre"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ECC-fs-XJM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-99" y="840"/>
+            <point key="canvasLocation" x="1558" y="1474"/>
         </scene>
-        <!--Item 1-->
+        <!--Kanal Listesi-->
         <scene sceneID="cVG-Xe-xdp">
             <objects>
-                <viewController id="X16-7x-56K" sceneMemberID="viewController">
+                <viewController id="X16-7x-56K" customClass="ViewControllerRadioList" customModule="yRadio" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kyA-35-R7D">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kuP-de-mnk">
+                                <rect key="frame" x="0.0" y="88" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem title="Kanal Listesi" width="42" springLoaded="YES" id="blb-Ir-7Tq"/>
+                                </items>
+                            </toolbar>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vWE-P5-KIy"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="r1z-2e-sp9"/>
+                    <tabBarItem key="tabBarItem" title="Kanal Listesi" image="rectangle.lefthalf.inset.filled" catalog="system" id="r1z-2e-sp9"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BMA-lJ-HgM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1786" y="840"/>
+            <point key="canvasLocation" x="11.594202898550726" y="1473.8839285714284"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="mHa-VS-vfe">
             <objects>
                 <tabBarController id="lir-os-qrG" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="np2-DP-dbl"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5qD-Ix-syz">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" itemPositioning="fill" id="5qD-Ix-syz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" red="1" green="0.2891837807" blue="0.37511192030000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </tabBar>
                     <connections>
                         <segue destination="X16-7x-56K" kind="relationship" relationship="viewControllers" id="t4N-8F-7Cd"/>
@@ -126,6 +149,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="rectangle.lefthalf.inset.filled" catalog="system" width="128" height="93"/>
+        <image name="rectangle.righthalf.inset.filled" catalog="system" width="128" height="93"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
