@@ -5,6 +5,9 @@
 //  Created by Yunus Gündüz on 4.05.2022.
 //
 
+// Ekran kitleme ozelligi gelmeli
+
+
 import UIKit
 
 import FRadioPlayer
@@ -51,7 +54,7 @@ class ViewController: UIViewController, FRadioPlayerDelegate {
         if artworkURL != nil{
             let url = URL(string: "\(artworkURL!)")
             channelLogo.kf.setImage(with: url)
-
+                // eger resim gelmediyse kontrolu yapilmali
             
             print("Debug: -artworkURL \(artworkURL!)")
         }
@@ -61,7 +64,7 @@ class ViewController: UIViewController, FRadioPlayerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         //MARK: - Outlet
-        
+        //Radio Url biyerde toplanmali
         player.delegate = self
         player.radioURL = URL(string: "https://playerservices.streamtheworld.com/api/livestream-redirect/JOY_TURK_SC?/")
     }
