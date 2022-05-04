@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--yRadio App-->
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="yRadio" customModuleProvider="target" sceneMemberID="viewController">
@@ -16,43 +16,107 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d5A-zc-2bv">
-                                <rect key="frame" x="111" y="788" width="193" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1w3-i3-cEk">
+                                <rect key="frame" x="116" y="598" width="183" height="144"/>
+                                <color key="backgroundColor" red="0.89494246239999997" green="0.94059979920000003" blue="0.98039847609999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="144" id="Om2-Ev-U9M"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Play/Pause">
+                                    <color key="titleColor" systemColor="systemTealColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnPlayPause:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1PR-3c-E4p"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Parca bilgisi" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pfp-Y9-zko">
+                                <rect key="frame" x="60" y="422" width="295" height="66"/>
+                                <color key="backgroundColor" red="0.89494246239999997" green="0.94059979920000003" blue="0.98039847609999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" red="0.89494246239999997" green="0.94059979920000003" blue="0.98039847609999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="SAl-Fv-Wa4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="highlightedColor" red="0.89494246239999997" green="0.94059979920000003" blue="0.98039847609999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b3h-TO-wzk">
+                                <rect key="frame" x="60" y="229" width="295" height="169"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="7"/>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d5A-zc-2bv">
+                                <rect key="frame" x="111" y="794" width="193" height="31"/>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Radyo listesi"/>
                                 <connections>
                                     <segue destination="lir-os-qrG" kind="show" id="nyT-I2-lk4"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1w3-i3-cEk">
-                                <rect key="frame" x="135" y="566" width="145" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Play/Pause"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="RrM-uy-oX4">
+                                <rect key="frame" x="60" y="164" width="295" height="32"/>
+                                <segments>
+                                    <segment title="Oynatıcı"/>
+                                    <segment title="Favorilerin"/>
+                                    <segment title="" image="lock" catalog="system"/>
+                                </segments>
                                 <connections>
-                                    <action selector="btnPlayPause:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1PR-3c-E4p"/>
+                                    <action selector="segmentedKontrol:" destination="BYZ-38-t0r" eventType="valueChanged" id="fr1-mM-CAD"/>
                                 </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Parca bilgisi" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pfp-Y9-zko">
-                                <rect key="frame" x="80" y="438" width="254" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b3h-TO-wzk">
-                                <rect key="frame" x="60" y="164" width="295" height="169"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </segmentedControl>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="eqo.gif" translatesAutoresizingMaskIntoConstraints="NO" id="dtO-qv-jsn">
+                                <rect key="frame" x="60" y="229" width="295" height="169"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="169" id="9Bs-7t-ZNo"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="7"/>
+                                </userDefinedRuntimeAttributes>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.89494246239999997" green="0.94059979920000003" blue="0.98039847609999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="d5A-zc-2bv" secondAttribute="bottom" constant="37" id="2Pa-MN-OfA"/>
+                            <constraint firstItem="pfp-Y9-zko" firstAttribute="centerX" secondItem="1w3-i3-cEk" secondAttribute="centerX" id="8e5-u4-k10"/>
+                            <constraint firstItem="dtO-qv-jsn" firstAttribute="leading" secondItem="b3h-TO-wzk" secondAttribute="leading" id="Adg-Rr-HWt"/>
+                            <constraint firstItem="d5A-zc-2bv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="111" id="GIt-xV-Tjv"/>
+                            <constraint firstItem="1w3-i3-cEk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="116" id="LEg-SY-KFN"/>
+                            <constraint firstItem="d5A-zc-2bv" firstAttribute="top" secondItem="1w3-i3-cEk" secondAttribute="bottom" constant="52" id="MnF-aT-GwX"/>
+                            <constraint firstItem="RrM-uy-oX4" firstAttribute="trailing" secondItem="dtO-qv-jsn" secondAttribute="trailing" id="RaS-SN-7NT"/>
+                            <constraint firstItem="RrM-uy-oX4" firstAttribute="leading" secondItem="dtO-qv-jsn" secondAttribute="leading" id="SPu-rT-e5i"/>
+                            <constraint firstItem="RrM-uy-oX4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="Tmy-wk-zlk"/>
+                            <constraint firstItem="pfp-Y9-zko" firstAttribute="top" secondItem="b3h-TO-wzk" secondAttribute="bottom" constant="24" id="V6N-3t-mHD"/>
+                            <constraint firstItem="RrM-uy-oX4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="76" id="dJt-yF-Ikg"/>
+                            <constraint firstItem="dtO-qv-jsn" firstAttribute="top" secondItem="RrM-uy-oX4" secondAttribute="bottom" constant="34" id="dhk-4N-Jnc"/>
+                            <constraint firstItem="RrM-uy-oX4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="l8O-Z1-6Sa"/>
+                            <constraint firstItem="b3h-TO-wzk" firstAttribute="trailing" secondItem="pfp-Y9-zko" secondAttribute="trailing" id="nmM-dN-Z0z"/>
+                            <constraint firstItem="b3h-TO-wzk" firstAttribute="trailing" secondItem="dtO-qv-jsn" secondAttribute="trailing" id="ruS-GW-Tto"/>
+                            <constraint firstItem="1w3-i3-cEk" firstAttribute="centerX" secondItem="d5A-zc-2bv" secondAttribute="centerX" id="uNN-xS-JPZ"/>
+                            <constraint firstItem="b3h-TO-wzk" firstAttribute="top" secondItem="dtO-qv-jsn" secondAttribute="top" id="w0X-e7-8hW"/>
+                            <constraint firstItem="dtO-qv-jsn" firstAttribute="leading" secondItem="pfp-Y9-zko" secondAttribute="leading" id="w2R-ei-V24"/>
+                            <constraint firstItem="dtO-qv-jsn" firstAttribute="bottom" secondItem="b3h-TO-wzk" secondAttribute="bottom" id="zxD-C6-gnB"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="yRadio App" id="bCU-LB-DGF"/>
+                    <navigationItem key="navigationItem" leftItemsSupplementBackButton="YES" id="bCU-LB-DGF">
+                        <barButtonItem key="leftBarButtonItem" title="Y-Radio App" id="eKR-vY-jXX">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="btnPlayPauseOutlet" destination="1w3-i3-cEk" id="WJl-rW-d7m"/>
                         <outlet property="channelLogo" destination="b3h-TO-wzk" id="5HQ-IK-cAo"/>
+                        <outlet property="gifImageView" destination="dtO-qv-jsn" id="bkr-Lc-dvs"/>
                         <outlet property="parcaBilgisiLabel" destination="pfp-Y9-zko" id="Ehp-ar-Fm7"/>
+                        <outlet property="radioListesiBtn" destination="d5A-zc-2bv" id="wPf-Yg-3iD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -71,12 +135,14 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="6su-Ya-Df0"/>
                                     <barButtonItem title="Ayarlar" width="42" springLoaded="YES" id="71x-OM-qsU"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="bHe-5G-2qX"/>
                                 </items>
                             </toolbar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ahi-zX-wZN"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.89494246239999997" green="0.94059979920000003" blue="0.98039847609999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Ayarlar" image="rectangle.righthalf.inset.filled" catalog="system" id="dzD-Dg-Rre"/>
                 </viewController>
@@ -87,7 +153,7 @@
         <!--Kanal Listesi-->
         <scene sceneID="cVG-Xe-xdp">
             <objects>
-                <viewController id="X16-7x-56K" customClass="ViewControllerRadioList" customModule="yRadio" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Kanal Listesi" id="X16-7x-56K" customClass="ViewControllerRadioList" customModule="yRadio" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kyA-35-R7D">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -96,12 +162,14 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="QiO-8Z-nop"/>
                                     <barButtonItem title="Kanal Listesi" width="42" springLoaded="YES" id="blb-Ir-7Tq"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Du7-7d-6Pu"/>
                                 </items>
                             </toolbar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vWE-P5-KIy"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.89494246239999997" green="0.94059979920000003" blue="0.98039847609999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Kanal Listesi" image="rectangle.lefthalf.inset.filled" catalog="system" id="r1z-2e-sp9"/>
                 </viewController>
@@ -149,10 +217,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="eqo.gif" width="660" height="409"/>
+        <image name="lock" catalog="system" width="128" height="128"/>
         <image name="rectangle.lefthalf.inset.filled" catalog="system" width="128" height="93"/>
         <image name="rectangle.righthalf.inset.filled" catalog="system" width="128" height="93"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

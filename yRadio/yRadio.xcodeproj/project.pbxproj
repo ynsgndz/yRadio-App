@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		011B10392822AC6700FB10B2 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 011B10382822AC6700FB10B2 /* Kingfisher */; };
 		0183F32928229F430082D599 /* ViewControllerRadioList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0183F32828229F430082D599 /* ViewControllerRadioList.swift */; };
+		01B7B3042823276700EB91E1 /* eqo.gif in Resources */ = {isa = PBXBuildFile; fileRef = 01B7B3032823276700EB91E1 /* eqo.gif */; };
+		01B7B3092823303200EB91E1 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 01B7B3082823303200EB91E1 /* Kingfisher */; };
 		01CA96A5282272090001C5BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CA96A4282272090001C5BE /* AppDelegate.swift */; };
 		01CA96A7282272090001C5BE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CA96A6282272090001C5BE /* SceneDelegate.swift */; };
 		01CA96A9282272090001C5BE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CA96A8282272090001C5BE /* ViewController.swift */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		0183F32828229F430082D599 /* ViewControllerRadioList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerRadioList.swift; sourceTree = "<group>"; };
+		01B7B3032823276700EB91E1 /* eqo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = eqo.gif; sourceTree = "<group>"; };
 		01CA96A1282272090001C5BE /* yRadio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = yRadio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01CA96A4282272090001C5BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01CA96A6282272090001C5BE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -38,7 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				011B10392822AC6700FB10B2 /* Kingfisher in Frameworks */,
+				01B7B3092823303200EB91E1 /* Kingfisher in Frameworks */,
 				7573D8CE96B0BAB9FC4C2D9B /* Pods_yRadio.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -76,6 +78,7 @@
 		01CA96A3282272090001C5BE /* yRadio */ = {
 			isa = PBXGroup;
 			children = (
+				01B7B3032823276700EB91E1 /* eqo.gif */,
 				0183F32428229E8D0082D599 /* Controllers */,
 				01CA96A4282272090001C5BE /* AppDelegate.swift */,
 				01CA96A6282272090001C5BE /* SceneDelegate.swift */,
@@ -123,7 +126,7 @@
 			);
 			name = yRadio;
 			packageProductDependencies = (
-				011B10382822AC6700FB10B2 /* Kingfisher */,
+				01B7B3082823303200EB91E1 /* Kingfisher */,
 			);
 			productName = yRadio;
 			productReference = 01CA96A1282272090001C5BE /* yRadio.app */;
@@ -154,7 +157,7 @@
 			);
 			mainGroup = 01CA9698282272090001C5BE;
 			packageReferences = (
-				011B10372822AC6700FB10B2 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				01B7B3072823303200EB91E1 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 01CA96A2282272090001C5BE /* Products */;
 			projectDirPath = "";
@@ -170,6 +173,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01B7B3042823276700EB91E1 /* eqo.gif in Resources */,
 				01CA96B12822720A0001C5BE /* LaunchScreen.storyboard in Resources */,
 				01CA96AE2822720A0001C5BE /* Assets.xcassets in Resources */,
 				01CA96AC282272090001C5BE /* Main.storyboard in Resources */,
@@ -450,20 +454,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		011B10372822AC6700FB10B2 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+		01B7B3072823303200EB91E1 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 7.0.0;
+				branch = master;
+				kind = branch;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		011B10382822AC6700FB10B2 /* Kingfisher */ = {
+		01B7B3082823303200EB91E1 /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 011B10372822AC6700FB10B2 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			package = 01B7B3072823303200EB91E1 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */

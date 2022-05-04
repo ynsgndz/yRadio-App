@@ -43,10 +43,14 @@ class ViewController: UIViewController, FRadioPlayerDelegate {
         print("Debug: -trackName \(trackName!)")
         }
     }
+    @IBOutlet weak var gifImageView: UIImageView!
     func radioPlayer(_ player: FRadioPlayer, metadataDidChange rawValue: String?){
         if rawValue != nil{
         print("Debug: -rawValue \(rawValue!)")
-            parcaBilgisiLabel.text = rawValue
+           
+            parcaBilgisiLabel.text? = rawValue!
+         
+            
         }
     }
     func radioPlayer(_ player: FRadioPlayer, artworkDidChange artworkURL: URL?){
@@ -63,19 +67,57 @@ class ViewController: UIViewController, FRadioPlayerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        //MARK: - Outlet
-        //Radio Url biyerde toplanmali
+       
+      
         player.delegate = self
-        player.radioURL = URL(string: "https://playerservices.streamtheworld.com/api/livestream-redirect/JOY_TURK_SC?/")
+        gifImageView.isHidden = true
     }
+    @IBOutlet weak var btnPlayPauseOutlet: UIButton!
+    //MARK: - Outlet
+    
+    @IBOutlet weak var radioListesiBtn: UIButton!
     @IBOutlet weak var parcaBilgisiLabel: UILabel!
     @IBOutlet weak var channelLogo: UIImageView!
     //MARK: - Control
     @IBAction func btnPlayPause(_ sender: Any) {
+        player.radioURL = URL(string: "https://playerservices.streamtheworld.com/api/livestream-redirect/JOY_TURK_SC?/")
         player.togglePlaying()
     }
+    @IBAction func segmentedKontrol(_ sender: UISegmentedControl) {
+        switch sender.selectedSegmentIndex{
+        case 0:
+            // Play
+            print("0")
+            channelLogo.isHidden = false
+            parcaBilgisiLabel.isHidden = false
+            btnPlayPauseOutlet.isHidden = false
+            gifImageView.isHidden = true
+            radioListesiBtn.isHidden = false
+            
+        case 1:
+            // Favori
+            channelLogo.isHidden = true
+            parcaBilgisiLabel.isHidden = true
+            btnPlayPauseOutlet.isHidden = false
+            gifImageView.isHidden = false
+            radioListesiBtn.isHidden = false
+            
+        case 2:
+            //Kilit
+            channelLogo.isHidden = false
+            gifImageView.isHidden = true
+            parcaBilgisiLabel.isHidden = false
+            btnPlayPauseOutlet.isHidden = true
+            radioListesiBtn.isHidden = true
+        default:
+            channelLogo.isHidden = false
+            parcaBilgisiLabel.isHidden = true
+            btnPlayPauseOutlet.isHidden = false
+            gifImageView.isHidden = true
+            radioListesiBtn.isHidden = false
+        }
+    }
     
-
 }
 
 
