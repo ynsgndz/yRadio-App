@@ -13,6 +13,7 @@
 		01CA96AC282272090001C5BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01CA96AA282272090001C5BE /* Main.storyboard */; };
 		01CA96AE2822720A0001C5BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01CA96AD2822720A0001C5BE /* Assets.xcassets */; };
 		01CA96B12822720A0001C5BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01CA96AF2822720A0001C5BE /* LaunchScreen.storyboard */; };
+		7573D8CE96B0BAB9FC4C2D9B /* Pods_yRadio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB7CA236D4D79826C3829AC0 /* Pods_yRadio.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,9 @@
 		01CA96AD2822720A0001C5BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		01CA96B02822720A0001C5BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		01CA96B22822720A0001C5BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		31D2B15CE02A3D396E1856DC /* Pods-yRadio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-yRadio.release.xcconfig"; path = "Target Support Files/Pods-yRadio/Pods-yRadio.release.xcconfig"; sourceTree = "<group>"; };
+		BA02B9F800B83CD9F16427C0 /* Pods-yRadio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-yRadio.debug.xcconfig"; path = "Target Support Files/Pods-yRadio/Pods-yRadio.debug.xcconfig"; sourceTree = "<group>"; };
+		BB7CA236D4D79826C3829AC0 /* Pods_yRadio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_yRadio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7573D8CE96B0BAB9FC4C2D9B /* Pods_yRadio.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				01CA96A3282272090001C5BE /* yRadio */,
 				01CA96A2282272090001C5BE /* Products */,
+				8EEFE371B5FD54DADCCF0A61 /* Pods */,
+				9662B95C5107B22495C437B4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +74,24 @@
 			path = yRadio;
 			sourceTree = "<group>";
 		};
+		8EEFE371B5FD54DADCCF0A61 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BA02B9F800B83CD9F16427C0 /* Pods-yRadio.debug.xcconfig */,
+				31D2B15CE02A3D396E1856DC /* Pods-yRadio.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		9662B95C5107B22495C437B4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BB7CA236D4D79826C3829AC0 /* Pods_yRadio.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 01CA96B52822720A0001C5BE /* Build configuration list for PBXNativeTarget "yRadio" */;
 			buildPhases = (
+				B558326305CF679DFE0655EC /* [CP] Check Pods Manifest.lock */,
 				01CA969D282272090001C5BE /* Sources */,
 				01CA969E282272090001C5BE /* Frameworks */,
 				01CA969F282272090001C5BE /* Resources */,
+				178294C7332FCDCE01A40DAF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		178294C7332FCDCE01A40DAF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-yRadio/Pods-yRadio-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-yRadio/Pods-yRadio-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-yRadio/Pods-yRadio-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B558326305CF679DFE0655EC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-yRadio-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		01CA969D282272090001C5BE /* Sources */ = {
@@ -282,6 +351,7 @@
 		};
 		01CA96B62822720A0001C5BE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA02B9F800B83CD9F16427C0 /* Pods-yRadio.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -310,6 +380,7 @@
 		};
 		01CA96B72822720A0001C5BE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 31D2B15CE02A3D396E1856DC /* Pods-yRadio.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
