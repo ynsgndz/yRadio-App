@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Player-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="yRadio" customModuleProvider="target" sceneMemberID="viewController">
@@ -16,28 +16,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1w3-i3-cEk">
-                                <rect key="frame" x="116" y="598" width="183" height="144"/>
-                                <color key="backgroundColor" red="0.89494246239999997" green="0.94059979920000003" blue="0.98039847609999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="144" id="Om2-Ev-U9M"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Play/Pause">
-                                    <color key="titleColor" systemColor="systemTealColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="btnPlayPause:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1PR-3c-E4p"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Parca bilgisi" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pfp-Y9-zko">
                                 <rect key="frame" x="60" y="422" width="295" height="66"/>
                                 <color key="backgroundColor" red="0.89494246239999997" green="0.94059979920000003" blue="0.98039847609999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="tintColor" red="0.89494246239999997" green="0.94059979920000003" blue="0.98039847609999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="66" id="SAl-Fv-Wa4"/>
+                                    <constraint firstAttribute="height" constant="66" id="pkP-89-MfM"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -46,14 +30,17 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
                                 </userDefinedRuntimeAttributes>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b3h-TO-wzk">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b3h-TO-wzk">
                                 <rect key="frame" x="60" y="229" width="295" height="169"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="169" id="Uev-RG-8VM"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="7"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="10"/>
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d5A-zc-2bv">
-                                <rect key="frame" x="111" y="794" width="193" height="31"/>
+                                <rect key="frame" x="20" y="794" width="374" height="31"/>
                                 <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Radyo listesi"/>
@@ -72,49 +59,70 @@
                                     <action selector="segmentedKontrol:" destination="BYZ-38-t0r" eventType="valueChanged" id="fr1-mM-CAD"/>
                                 </connections>
                             </segmentedControl>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="eqo.gif" translatesAutoresizingMaskIntoConstraints="NO" id="dtO-qv-jsn">
-                                <rect key="frame" x="60" y="229" width="295" height="169"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" role="primary" translatesAutoresizingMaskIntoConstraints="NO" id="1w3-i3-cEk">
+                                <rect key="frame" x="111" y="677" width="183" height="70"/>
+                                <color key="backgroundColor" red="0.8463770457468609" green="0.8866237730106109" blue="0.93263661678418552" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="169" id="9Bs-7t-ZNo"/>
+                                    <constraint firstAttribute="height" constant="70" id="9tS-cf-YU3"/>
                                 </constraints>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Play / Pause">
+                                    <color key="titleColor" red="0.21619665622711182" green="0.076558299362659454" blue="0.35601603984832764" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="7"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                            </imageView>
+                                <connections>
+                                    <action selector="btnPlayPause:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1PR-3c-E4p"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="JOYTURK" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yEy-2b-3MI">
+                                <rect key="frame" x="60" y="511" width="295" height="66"/>
+                                <color key="backgroundColor" red="0.89494246239999997" green="0.94059979920000003" blue="0.98039847609999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" red="0.89494246239999997" green="0.94059979920000003" blue="0.98039847609999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="DnX-g5-l1Y"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="highlightedColor" red="0.89494246239999997" green="0.94059979920000003" blue="0.98039847609999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.89494246239999997" green="0.94059979920000003" blue="0.98039847609999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="d5A-zc-2bv" secondAttribute="bottom" constant="37" id="2Pa-MN-OfA"/>
-                            <constraint firstItem="pfp-Y9-zko" firstAttribute="centerX" secondItem="1w3-i3-cEk" secondAttribute="centerX" id="8e5-u4-k10"/>
-                            <constraint firstItem="dtO-qv-jsn" firstAttribute="leading" secondItem="b3h-TO-wzk" secondAttribute="leading" id="Adg-Rr-HWt"/>
-                            <constraint firstItem="d5A-zc-2bv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="111" id="GIt-xV-Tjv"/>
-                            <constraint firstItem="1w3-i3-cEk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="116" id="LEg-SY-KFN"/>
-                            <constraint firstItem="d5A-zc-2bv" firstAttribute="top" secondItem="1w3-i3-cEk" secondAttribute="bottom" constant="52" id="MnF-aT-GwX"/>
-                            <constraint firstItem="RrM-uy-oX4" firstAttribute="trailing" secondItem="dtO-qv-jsn" secondAttribute="trailing" id="RaS-SN-7NT"/>
-                            <constraint firstItem="RrM-uy-oX4" firstAttribute="leading" secondItem="dtO-qv-jsn" secondAttribute="leading" id="SPu-rT-e5i"/>
-                            <constraint firstItem="RrM-uy-oX4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="Tmy-wk-zlk"/>
-                            <constraint firstItem="pfp-Y9-zko" firstAttribute="top" secondItem="b3h-TO-wzk" secondAttribute="bottom" constant="24" id="V6N-3t-mHD"/>
-                            <constraint firstItem="RrM-uy-oX4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="76" id="dJt-yF-Ikg"/>
-                            <constraint firstItem="dtO-qv-jsn" firstAttribute="top" secondItem="RrM-uy-oX4" secondAttribute="bottom" constant="34" id="dhk-4N-Jnc"/>
-                            <constraint firstItem="RrM-uy-oX4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="l8O-Z1-6Sa"/>
-                            <constraint firstItem="b3h-TO-wzk" firstAttribute="trailing" secondItem="pfp-Y9-zko" secondAttribute="trailing" id="nmM-dN-Z0z"/>
-                            <constraint firstItem="b3h-TO-wzk" firstAttribute="trailing" secondItem="dtO-qv-jsn" secondAttribute="trailing" id="ruS-GW-Tto"/>
-                            <constraint firstItem="1w3-i3-cEk" firstAttribute="centerX" secondItem="d5A-zc-2bv" secondAttribute="centerX" id="uNN-xS-JPZ"/>
-                            <constraint firstItem="b3h-TO-wzk" firstAttribute="top" secondItem="dtO-qv-jsn" secondAttribute="top" id="w0X-e7-8hW"/>
-                            <constraint firstItem="dtO-qv-jsn" firstAttribute="leading" secondItem="pfp-Y9-zko" secondAttribute="leading" id="w2R-ei-V24"/>
-                            <constraint firstItem="dtO-qv-jsn" firstAttribute="bottom" secondItem="b3h-TO-wzk" secondAttribute="bottom" id="zxD-C6-gnB"/>
+                            <constraint firstItem="d5A-zc-2bv" firstAttribute="top" secondItem="1w3-i3-cEk" secondAttribute="bottom" constant="47" id="31o-gd-i8R"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="d5A-zc-2bv" secondAttribute="bottom" constant="37" id="3pe-ar-aEc"/>
+                            <constraint firstItem="yEy-2b-3MI" firstAttribute="centerX" secondItem="d5A-zc-2bv" secondAttribute="centerX" id="6Od-cJ-KLw"/>
+                            <constraint firstItem="pfp-Y9-zko" firstAttribute="top" secondItem="b3h-TO-wzk" secondAttribute="bottom" constant="24" id="6Rn-GU-yA2"/>
+                            <constraint firstItem="b3h-TO-wzk" firstAttribute="top" secondItem="RrM-uy-oX4" secondAttribute="bottom" constant="34" id="Tma-fV-fc5"/>
+                            <constraint firstItem="b3h-TO-wzk" firstAttribute="leading" secondItem="pfp-Y9-zko" secondAttribute="leading" id="U39-wR-qNm"/>
+                            <constraint firstItem="pfp-Y9-zko" firstAttribute="leading" secondItem="yEy-2b-3MI" secondAttribute="leading" id="VAp-2F-DZ3"/>
+                            <constraint firstItem="1w3-i3-cEk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="111" id="far-Dc-ove"/>
+                            <constraint firstItem="yEy-2b-3MI" firstAttribute="top" secondItem="pfp-Y9-zko" secondAttribute="bottom" constant="23" id="g2D-Fp-WsD"/>
+                            <constraint firstItem="RrM-uy-oX4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="42" id="gmZ-m0-2Zp"/>
+                            <constraint firstItem="RrM-uy-oX4" firstAttribute="trailing" secondItem="b3h-TO-wzk" secondAttribute="trailing" id="is2-jI-q84"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1w3-i3-cEk" secondAttribute="trailing" constant="120" id="o1t-cS-kRL"/>
+                            <constraint firstItem="RrM-uy-oX4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oSE-Si-mLQ"/>
+                            <constraint firstItem="RrM-uy-oX4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="oid-HC-clE"/>
+                            <constraint firstItem="1w3-i3-cEk" firstAttribute="leading" secondItem="d5A-zc-2bv" secondAttribute="leading" id="pX6-YW-nOg"/>
+                            <constraint firstItem="pfp-Y9-zko" firstAttribute="trailing" secondItem="yEy-2b-3MI" secondAttribute="trailing" id="qPF-fp-dlb"/>
+                            <constraint firstItem="b3h-TO-wzk" firstAttribute="trailing" secondItem="pfp-Y9-zko" secondAttribute="trailing" id="tIP-9p-wRl"/>
+                            <constraint firstItem="RrM-uy-oX4" firstAttribute="leading" secondItem="b3h-TO-wzk" secondAttribute="leading" id="xqY-C2-Ynm"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" leftItemsSupplementBackButton="YES" id="bCU-LB-DGF">
-                        <barButtonItem key="leftBarButtonItem" title="Y-Radio App" id="eKR-vY-jXX">
-                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </barButtonItem>
+                    <navigationItem key="navigationItem" title="Player" prompt="Y-Radio App" id="omR-zB-yTn">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="camera" id="GDk-Zw-vnD"/>
                     </navigationItem>
                     <connections>
                         <outlet property="btnPlayPauseOutlet" destination="1w3-i3-cEk" id="WJl-rW-d7m"/>
                         <outlet property="channelLogo" destination="b3h-TO-wzk" id="5HQ-IK-cAo"/>
-                        <outlet property="gifImageView" destination="dtO-qv-jsn" id="bkr-Lc-dvs"/>
                         <outlet property="parcaBilgisiLabel" destination="pfp-Y9-zko" id="Ehp-ar-Fm7"/>
                         <outlet property="radioListesiBtn" destination="d5A-zc-2bv" id="wPf-Yg-3iD"/>
                     </connections>
@@ -144,7 +152,7 @@
                         <viewLayoutGuide key="safeArea" id="ahi-zX-wZN"/>
                         <color key="backgroundColor" red="0.89494246239999997" green="0.94059979920000003" blue="0.98039847609999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Ayarlar" image="rectangle.righthalf.inset.filled" catalog="system" id="dzD-Dg-Rre"/>
+                    <tabBarItem key="tabBarItem" title="Ayarlar" image="gearshape" catalog="system" id="dzD-Dg-Rre"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ECC-fs-XJM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -153,40 +161,54 @@
         <!--Kanal Listesi-->
         <scene sceneID="cVG-Xe-xdp">
             <objects>
-                <viewController title="Kanal Listesi" id="X16-7x-56K" customClass="ViewControllerRadioList" customModule="yRadio" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Kanal Listesi" id="X16-7x-56K" customClass="ChannelListViewController" customModule="yRadio" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kyA-35-R7D">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kuP-de-mnk">
-                                <rect key="frame" x="0.0" y="88" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <items>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="QiO-8Z-nop"/>
-                                    <barButtonItem title="Kanal Listesi" width="42" springLoaded="YES" id="blb-Ir-7Tq"/>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Du7-7d-6Pu"/>
-                                </items>
-                            </toolbar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="bRw-wL-GwN">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="listCell" id="FWQ-i8-Ugg">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FWQ-i8-Ugg" id="dau-9k-yw7">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vWE-P5-KIy"/>
                         <color key="backgroundColor" red="0.89494246239999997" green="0.94059979920000003" blue="0.98039847609999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="vWE-P5-KIy" firstAttribute="bottom" secondItem="bRw-wL-GwN" secondAttribute="bottom" id="I7D-2e-MGF"/>
+                            <constraint firstItem="vWE-P5-KIy" firstAttribute="trailing" secondItem="bRw-wL-GwN" secondAttribute="trailing" id="Jz1-Iu-fiI"/>
+                            <constraint firstItem="bRw-wL-GwN" firstAttribute="top" secondItem="kyA-35-R7D" secondAttribute="topMargin" id="MIw-VL-YxM"/>
+                            <constraint firstItem="bRw-wL-GwN" firstAttribute="leading" secondItem="vWE-P5-KIy" secondAttribute="leading" id="spf-kg-gRS"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Kanal Listesi" image="rectangle.lefthalf.inset.filled" catalog="system" id="r1z-2e-sp9"/>
+                    <tabBarItem key="tabBarItem" title="Kanal Listesi" image="music.note.list" catalog="system" id="r1z-2e-sp9"/>
+                    <connections>
+                        <outlet property="myTableView" destination="bRw-wL-GwN" id="3om-MY-77B"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BMA-lJ-HgM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="11.594202898550726" y="1473.8839285714284"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Kanal Listesi-->
         <scene sceneID="mHa-VS-vfe">
             <objects>
                 <tabBarController id="lir-os-qrG" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="np2-DP-dbl"/>
+                    <navigationItem key="navigationItem" title="Kanal Listesi" leftItemsSupplementBackButton="YES" id="np2-DP-dbl"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" itemPositioning="fill" id="5qD-Ix-syz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="selectedImageTintColor" red="1" green="0.2891837807" blue="0.37511192030000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="selectedImageTintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="X16-7x-56K" kind="relationship" relationship="viewControllers" id="t4N-8F-7Cd"/>
@@ -205,6 +227,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Yof-UZ-9Pc">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <navigationBarAppearance key="standardAppearance" backgroundEffect="regular"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -217,12 +240,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="eqo.gif" width="660" height="409"/>
+        <image name="gearshape" catalog="system" width="128" height="121"/>
         <image name="lock" catalog="system" width="128" height="128"/>
-        <image name="rectangle.lefthalf.inset.filled" catalog="system" width="128" height="93"/>
-        <image name="rectangle.righthalf.inset.filled" catalog="system" width="128" height="93"/>
-        <systemColor name="systemTealColor">
-            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <image name="music.note.list" catalog="system" width="128" height="115"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>
