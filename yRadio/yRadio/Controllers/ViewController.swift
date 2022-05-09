@@ -11,7 +11,7 @@
 import UIKit
 import FRadioPlayer
 import Kingfisher
-
+import SwiftyGif
 
 
 class ViewController: UIViewController, FRadioPlayerDelegate {
@@ -21,13 +21,14 @@ class ViewController: UIViewController, FRadioPlayerDelegate {
     func radioPlayer(_ player: FRadioPlayer, playerStateDidChange state: FRadioPlayerState) {
         
             print("Debug: -FRadioPlayerState \(state)")
-        
+        eqolaizerState()
        
     }
     
     func radioPlayer(_ player: FRadioPlayer, playbackStateDidChange state: FRadioPlaybackState) {
       
             print("Debug: -FRadioPlaybackState \(state)")
+       eqolaizerState()
         
     }
     
@@ -57,109 +58,108 @@ class ViewController: UIViewController, FRadioPlayerDelegate {
        
         if artworkURL != nil{
             let url = URL(string: "\(artworkURL!)")
-            channelLogo.kf.setImage(with: url)
+            channelSarkıLogo.kf.setImage(with: url)
                
             
             print("Debug: -artworkURL \(artworkURL!)")
         }
     }
+    func plyPlayer(){
+        let radioURL = "https://playerservices.streamtheworld.com/api/livestream-redirect/METRO_FM_SC?/;"
+        player.radioURL = URL(string:"\(radioURL)" )
+        player.togglePlaying()
+        print("Debug: -Radio url adresi \(radioURL)")
+    }
     let player = FRadioPlayer.shared
-
+  
     override func viewDidLoad() {
         super.viewDidLoad()
        
-        channelLogo.isHidden = false
+        channelSarkıLogo.isHidden = false
         player.delegate = self
-      
+        plyPlayer()
+
     }
    
     //MARK: - Outletler
+    @IBOutlet weak var channelNameLabel: UILabel!
     @IBOutlet weak var btnPlayPauseOutlet: UIButton!
+    @IBOutlet weak var ekolaizerGifImageView: UIImageView!
     @IBOutlet weak var radioListesiBtn: UIButton!
     @IBOutlet weak var parcaBilgisiLabel: UILabel!
-    @IBOutlet weak var channelLogo: UIImageView!
-    
+    @IBOutlet weak var channelSarkıLogo: UIImageView!
     //MARK: - Actionlar
     @IBAction func btnPlayPause(_ sender: Any) {
-        player.radioURL = URL(string: "https://playerservices.streamtheworld.com/api/livestream-redirect/JOY_TURK_SC?/")
-        player.togglePlaying()
+       
+        if player.isPlaying{
+            player.stop()
+
+   
+        }else{
+            player.play()
+         
+        }
     }
+  
+    func eqolaizerState(){
+        if player.isPlaying{
+ 
+            do{
+                let gif = try UIImage(gifName: "eqol.gif")
+                self.ekolaizerGifImageView.setGifImage(gif, loopCount: -1) // Will loop stop
+            }catch{
+                print(error)
+            }
+        }else{
+            do{
+                let gif = try UIImage(gifName: "eqol.gif")
+                self.ekolaizerGifImageView.setGifImage(gif, loopCount: 0) // Will loop forever
+            }catch{
+                print(error)
+            }
+        }
+    }
+ 
     @IBAction func segmentedKontrol(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex{
         case 0:
             // Play
-            print("0")
-            channelLogo.isHidden = false
+            print("Debug: Segmented control 0 play mod ")
+            channelSarkıLogo.isHidden = false
             parcaBilgisiLabel.isHidden = false
             btnPlayPauseOutlet.isHidden = false
-         
             radioListesiBtn.isHidden = false
-            
+            channelNameLabel.isHidden = false
+            ekolaizerGifImageView.isHidden = false
         case 1:
             // Favori
-            channelLogo.isHidden = true
+            print("Debug: Segmented control 1 favori mod")
+            channelSarkıLogo.isHidden = true
             parcaBilgisiLabel.isHidden = true
-            btnPlayPauseOutlet.isHidden = false
-       
-            radioListesiBtn.isHidden = false
-            
+            btnPlayPauseOutlet.isHidden = true
+            radioListesiBtn.isHidden = true
+            channelNameLabel.isHidden = true
+            ekolaizerGifImageView.isHidden = true
         case 2:
             //Kilit
-            channelLogo.isHidden = false
-           
+            print("Debug: Segmented control 2 kilit mod")
+            channelSarkıLogo.isHidden = false
             parcaBilgisiLabel.isHidden = false
             btnPlayPauseOutlet.isHidden = true
             radioListesiBtn.isHidden = true
+            channelNameLabel.isHidden = false
+            ekolaizerGifImageView.isHidden = false
         default:
-            channelLogo.isHidden = false
-            parcaBilgisiLabel.isHidden = true
+            print("Debug: Segmented control default mod")
+            channelSarkıLogo.isHidden = false
+            parcaBilgisiLabel.isHidden = false
             btnPlayPauseOutlet.isHidden = false
-           
             radioListesiBtn.isHidden = false
+            channelNameLabel.isHidden = false
+            ekolaizerGifImageView.isHidden = false
+            
         }
     }
     
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0106B06F2829081800990572 /* eqol.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0106B06E2829081800990572 /* eqol.gif */; };
 		017BD0AF282410DD006ABD4A /* ChannelListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017BD0AE282410DD006ABD4A /* ChannelListViewController.swift */; };
-		01B7B3042823276700EB91E1 /* eqo.gif in Resources */ = {isa = PBXBuildFile; fileRef = 01B7B3032823276700EB91E1 /* eqo.gif */; };
 		01B7B3092823303200EB91E1 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 01B7B3082823303200EB91E1 /* Kingfisher */; };
 		01CA96A5282272090001C5BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CA96A4282272090001C5BE /* AppDelegate.swift */; };
 		01CA96A7282272090001C5BE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CA96A6282272090001C5BE /* SceneDelegate.swift */; };
@@ -20,8 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0106B06E2829081800990572 /* eqol.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = eqol.gif; path = ../../../../eqol.gif; sourceTree = "<group>"; };
 		017BD0AE282410DD006ABD4A /* ChannelListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelListViewController.swift; sourceTree = "<group>"; };
-		01B7B3032823276700EB91E1 /* eqo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = eqo.gif; sourceTree = "<group>"; };
 		01CA96A1282272090001C5BE /* yRadio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = yRadio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01CA96A4282272090001C5BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01CA96A6282272090001C5BE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,7 +78,7 @@
 		01CA96A3282272090001C5BE /* yRadio */ = {
 			isa = PBXGroup;
 			children = (
-				01B7B3032823276700EB91E1 /* eqo.gif */,
+				0106B06E2829081800990572 /* eqol.gif */,
 				0183F32428229E8D0082D599 /* Controllers */,
 				01CA96A4282272090001C5BE /* AppDelegate.swift */,
 				01CA96A6282272090001C5BE /* SceneDelegate.swift */,
@@ -173,8 +173,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01B7B3042823276700EB91E1 /* eqo.gif in Resources */,
 				01CA96B12822720A0001C5BE /* LaunchScreen.storyboard in Resources */,
+				0106B06F2829081800990572 /* eqol.gif in Resources */,
 				01CA96AE2822720A0001C5BE /* Assets.xcassets in Resources */,
 				01CA96AC282272090001C5BE /* Main.storyboard in Resources */,
 			);
