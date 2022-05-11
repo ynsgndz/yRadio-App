@@ -78,9 +78,18 @@ class ViewController: UIViewController, FRadioPlayerDelegate {
         channelSarkıLogo.isHidden = false
         player.delegate = self
         plyPlayer()
-
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame = self.view.bounds
+        gradientLayer.colors = [UIColor.systemPink.cgColor, UIColor.purple.cgColor]
+        self.view.layer.insertSublayer(gradientLayer, at: 0)
+        
+        
+        channelSarkıLogo.layer.cornerRadius = 25
     }
    
+    
+    
+    
     //MARK: - Outletler
     @IBOutlet weak var channelNameLabel: UILabel!
     @IBOutlet weak var btnPlayPauseOutlet: UIButton!
