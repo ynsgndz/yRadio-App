@@ -8,9 +8,9 @@ KingFisher
 
 pod init :
 
-pod 'Kingfisher', '~> 7.0'
-pod 'FRadioPlayer'
-pod 'SwiftyGif'
-
+pod 'Kingfisher', '~> 7.0'.  <br>
+pod 'FRadioPlayer'. <br>
+pod 'SwiftyGif'.  <br>
+   
 
 
