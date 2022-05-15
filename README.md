@@ -1,6 +1,7 @@
 # yRadio-App
-FRadioPlayer
-KingFisher
+FRadioPlayer,
+KingFisher,
+SwiftyGif,
  kütüphanelerini kullanarak  kendi ihtiyaclarıma göre geliştirdiğim radyo uygulamasıdır.
 
 
