@@ -1,0 +1,24 @@
+PODS:
+  - FRadioPlayer (0.1.22)
+  - Kingfisher (7.2.2)
+  - SwiftyGif (5.4.3)
+
+DEPENDENCIES:
+  - FRadioPlayer
+  - Kingfisher (~> 7.0)
+  - SwiftyGif
+
+SPEC REPOS:
+  trunk:
+    - FRadioPlayer
+    - Kingfisher
+    - SwiftyGif
+
+SPEC CHECKSUMS:
+  FRadioPlayer: 7c6173cc44a3be39a9419abd3a931d9223e175e4
+  Kingfisher: 184d4d1a8c36666e663caf8e08abe87898595c53
+  SwiftyGif: 6c3eafd0ce693cad58bb63d2b2fb9bacb8552780
+
+PODFILE CHECKSUM: 60a33391ff1f03a1b3d59ba22ad005e50478cbaa
+
+COCOAPODS: 1.11.3
