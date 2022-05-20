@@ -1,2 +1,17 @@
 # yRadio-App
-FRadioPlayer kütüphanesini kullanarak  kendi ihtiyaclarıma göre geliştirdiğim radyo uygulamasıdır.
+FRadioPlayer,
+KingFisher,
+SwiftyGif,
+ kütüphanelerini kullanarak  kendi ihtiyaclarıma göre geliştirdiğim radyo uygulamasıdır.
+
+
+
+
+pod init :
+
+pod 'Kingfisher', '~> 7.0'.  <br>
+pod 'FRadioPlayer'. <br>
+pod 'SwiftyGif'.  <br>
+   
+
+
