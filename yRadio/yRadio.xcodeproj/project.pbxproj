@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0106B06F2829081800990572 /* eqol.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0106B06E2829081800990572 /* eqol.gif */; };
+		01047E3128310484001227D1 /* eqol.gif in Resources */ = {isa = PBXBuildFile; fileRef = 01047E3028310484001227D1 /* eqol.gif */; };
+		01047E33283105E7001227D1 /* settingPageControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01047E32283105E7001227D1 /* settingPageControllerViewController.swift */; };
 		017BD0AF282410DD006ABD4A /* ChannelListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017BD0AE282410DD006ABD4A /* ChannelListViewController.swift */; };
 		01B7B3092823303200EB91E1 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 01B7B3082823303200EB91E1 /* Kingfisher */; };
 		01CA96A5282272090001C5BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CA96A4282272090001C5BE /* AppDelegate.swift */; };
@@ -20,7 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0106B06E2829081800990572 /* eqol.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = eqol.gif; path = ../../../../eqol.gif; sourceTree = "<group>"; };
+		01047E3028310484001227D1 /* eqol.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = eqol.gif; sourceTree = "<group>"; };
+		01047E32283105E7001227D1 /* settingPageControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = settingPageControllerViewController.swift; sourceTree = "<group>"; };
 		017BD0AE282410DD006ABD4A /* ChannelListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelListViewController.swift; sourceTree = "<group>"; };
 		01CA96A1282272090001C5BE /* yRadio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = yRadio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01CA96A4282272090001C5BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -53,8 +55,16 @@
 			children = (
 				01CA96A8282272090001C5BE /* ViewController.swift */,
 				017BD0AE282410DD006ABD4A /* ChannelListViewController.swift */,
+				01047E32283105E7001227D1 /* settingPageControllerViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		01B47B802837A95B004C0394 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Source;
 			sourceTree = "<group>";
 		};
 		01CA9698282272090001C5BE = {
@@ -78,7 +88,9 @@
 		01CA96A3282272090001C5BE /* yRadio */ = {
 			isa = PBXGroup;
 			children = (
-				0106B06E2829081800990572 /* eqol.gif */,
+				01B47B802837A95B004C0394 /* Source */,
+				01047E3028310484001227D1 /* eqol.gif */,
+				01FDCD612830F7BF005CE482 /* image */,
 				0183F32428229E8D0082D599 /* Controllers */,
 				01CA96A4282272090001C5BE /* AppDelegate.swift */,
 				01CA96A6282272090001C5BE /* SceneDelegate.swift */,
@@ -88,6 +100,13 @@
 				01CA96B22822720A0001C5BE /* Info.plist */,
 			);
 			path = yRadio;
+			sourceTree = "<group>";
+		};
+		01FDCD612830F7BF005CE482 /* image */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = image;
 			sourceTree = "<group>";
 		};
 		8EEFE371B5FD54DADCCF0A61 /* Pods */ = {
@@ -174,7 +193,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				01CA96B12822720A0001C5BE /* LaunchScreen.storyboard in Resources */,
-				0106B06F2829081800990572 /* eqol.gif in Resources */,
+				01047E3128310484001227D1 /* eqol.gif in Resources */,
 				01CA96AE2822720A0001C5BE /* Assets.xcassets in Resources */,
 				01CA96AC282272090001C5BE /* Main.storyboard in Resources */,
 			);
@@ -229,6 +248,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01047E33283105E7001227D1 /* settingPageControllerViewController.swift in Sources */,
 				01CA96A9282272090001C5BE /* ViewController.swift in Sources */,
 				01CA96A5282272090001C5BE /* AppDelegate.swift in Sources */,
 				017BD0AF282410DD006ABD4A /* ChannelListViewController.swift in Sources */,

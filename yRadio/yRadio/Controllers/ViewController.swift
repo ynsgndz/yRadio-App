@@ -16,6 +16,7 @@ import SwiftyGif
 
 class ViewController: UIViewController, FRadioPlayerDelegate {
     
+    var radioURLm=""
     
     //MARK: - Delegate
     func radioPlayer(_ player: FRadioPlayer, playerStateDidChange state: FRadioPlayerState) {
@@ -65,16 +66,20 @@ class ViewController: UIViewController, FRadioPlayerDelegate {
         }
     }
     func plyPlayer(){
-        let radioURL = "https://playerservices.streamtheworld.com/api/livestream-redirect/METRO_FM_SC?/;"
-        player.radioURL = URL(string:"\(radioURL)" )
+        
         player.togglePlaying()
-        print("Debug: -Radio url adresi \(radioURL)")
+        
     }
     let player = FRadioPlayer.shared
   
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        if radioURLm.isEmpty{
+            radioURLm = "https://playerservices.streamtheworld.com/api/livestream-redirect/JOY_TURK_SC?/;"
+            print("Debug: -radio urlm emty  \(radioURLm)")
+        }
+        let radioURL = radioURLm
+        player.radioURL = URL(string:"\(radioURL)" )
         channelSarkıLogo.isHidden = false
         player.delegate = self
         plyPlayer()
@@ -101,6 +106,8 @@ class ViewController: UIViewController, FRadioPlayerDelegate {
     @IBAction func btnPlayPause(_ sender: Any) {
        
         if player.isPlaying{
+            print("Debug: -radio urlm emty  \(radioURLm)")
+            
             player.stop()
 
    
