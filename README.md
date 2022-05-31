@@ -6,7 +6,6 @@ SwiftyGif,
 
 
 
-
 pod init :
 
 pod 'Kingfisher', '~> 7.0'.  <br>
@@ -15,3 +14,4 @@ pod 'SwiftyGif'.  <br>
    
 
 
+Radyo isimleri ve url adresleri dictionary ile tutulmaktadir.
