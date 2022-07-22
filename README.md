@@ -15,3 +15,6 @@ pod 'SwiftyGif'.  <br>
 
 
 Radyo isimleri ve url adresleri dictionary ile tutulmaktadir.
+
+
+https://youtu.be/kmZ8hhK-THo
